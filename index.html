@@ -2,26 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    
     <title>What won't you tell me?</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
 
-    <style type="text/css">
+    <style>
 
         *:not(.icon) {
             font-family: helvetica, serif !important;
         }
 
+        .cards {
+            dmax-width: 1200px
+        }
         .card {
             width: 200px !important;
         }
-
         .card.quiz {
             width: 250px !important;
         }
-
         .card img {
             padding: 20px !important;
         }
@@ -29,23 +33,78 @@
         .a-red {
             background-color: #BE1E2D !important;
         }
-
         .a-green {
             background-color: #006738 !important;
         }
-
         .a-blue {
             background-color: #2E3092 !important;
         }
-
         .a-yellow {
             background-color: #FFF100 !important;
         }
 
+        .masthead .ui.menu .ui.button {
+            margin-left: 0.5em;
+        }
+        .masthead h1.ui.header {
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+            font-size: 2em;
+            font-weight: normal;
+        }
+        .masthead h2 {
+            font-size: 1.2em;
+            font-weight: normal;
+            padding: 1em;
+            padding-top: 0em
+        }
+
+        .footer.segment {
+            padding: 5em 0em;
+        }
+        .ui.footer.segment {
+            margin: 1em 0em 0em;
+            padding: 2em 0em;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .masthead h1.ui.header {
+                font-size: 1.5em;
+                margin: 0em;
+                margin-top: 0.7em
+            }
+            .masthead h2 {
+                margin-top: 0em;
+                font-size: 1em;
+                display: none
+            }
+        }    
     </style>
 </head>
 <body>
-<div class="ui link centered cards" style="padding: 10px">
+
+<div class="pusher">
+    <div class="ui inverted vertical masthead center aligned segment">
+        <div class="ui container">
+            <div class="ui large secondary inverted pointing menu">
+                <a class="active item" href="#">Learn</a>
+                <a class="item" href="https://goo.gl/forms/60aE4hLwdIS1Lxs93">Quiz</a>
+                <a class="item" href="mailto:15728269@student.ncad.ie">Contact</a>
+            </div>
+        </div>
+
+        <div class="ui text container">
+            <h1 class="ui inverted header">
+                Non-verbal communication at the workplace
+            </h1>
+            <h2>
+                Study the four archetypes and take the quiz to assess your skills.
+            </h2>
+        </div>
+    </div>
+</div>
+
+<div class="ui link centered cards" style="padding: 10px; margin: 50px">
 
     <a class="ui raised card quiz" href="https://goo.gl/forms/60aE4hLwdIS1Lxs93">
         <img src="assets/LogoWWYTM.png" class="ui centered circular image"/>
@@ -101,7 +160,15 @@
             <i aria-hidden="true" class="book icon"> </i> PDF
         </div>
     </a>
-
 </div>
+
+<div class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+    <div class="ui horizontal inverted small divided link list">
+        &copy; 2018 <a class="item" href="https://livrueger.wordpress.com">Liv Rüger</a>
+    </div>
+    </div>
+</div>
+
 </body>
 </html>
