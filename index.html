@@ -18,7 +18,7 @@
         }
 
         .cards {
-            dmax-width: 1200px
+            max-width: 1200px
         }
         .card {
             width: 200px !important;
@@ -87,7 +87,8 @@
     <div class="ui inverted vertical masthead center aligned segment">
         <div class="ui container">
             <div class="ui large secondary inverted pointing menu">
-                <a class="active item" href="#">Learn</a>
+                <a class="active item" href="#home">Home</a>
+                <a class="item" href="#trailer" onclick="$('.ui.modal').modal('show'); $('.ui.embed').embed();">Trailer</a>
                 <a class="item" href="https://goo.gl/forms/60aE4hLwdIS1Lxs93">Quiz</a>
                 <a class="item" href="mailto:15728269@student.ncad.ie">Contact</a>
             </div>
@@ -101,6 +102,18 @@
                 Study the four archetypes and take the quiz to assess your skills
             </h2>
         </div>
+    </div>
+</div>
+
+<div class="ui modal">
+    <div class="header">
+        Course Trailer
+    </div>
+    <div class="content">
+        <div class="ui embed" data-url="https://www.youtube.com/embed/sinKRtW9n04"></div>
+    </div>
+    <div class="actions">
+        <div class="ui positive icon button" onclick="$('.ui.embed').embed('destroy');">Done</div>
     </div>
 </div>
 
