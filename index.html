@@ -11,6 +11,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
 
+    <script>
+        function showTrailer(popup, video) {
+            $(popup)
+                .modal({
+                    onHide: function() {
+                        $(video).embed('destroy');
+                    },
+                    onVisible: function() {
+                        $(video).embed();
+                    }
+                })
+                .modal('show');
+        }
+    </script>
+
     <style>
 
         *:not(.icon) {
@@ -82,13 +97,13 @@
     </style>
 </head>
 <body>
-
+        
 <div class="pusher">
     <div class="ui inverted vertical masthead center aligned segment">
         <div class="ui container">
             <div class="ui large secondary inverted pointing menu">
                 <a class="active item" href="#home">Home</a>
-                <a class="item" href="#trailer" onclick="$('.ui.modal').modal('show'); $('.ui.embed').embed();">Trailer</a>
+                <a class="item" href="#trailer" onclick="showTrailer('.ui.modal', '.ui.embed')">Trailer</a>
                 <a class="item" href="https://goo.gl/forms/60aE4hLwdIS1Lxs93">Quiz</a>
                 <a class="item" href="mailto:15728269@student.ncad.ie">Contact</a>
             </div>
@@ -113,7 +128,7 @@
         <div class="ui embed" data-url="https://www.youtube.com/embed/sinKRtW9n04"></div>
     </div>
     <div class="actions">
-        <div class="ui positive icon button" onclick="$('.ui.embed').embed('destroy');">Done</div>
+        <div class="ui positive icon button">Done</div>
     </div>
 </div>
 
